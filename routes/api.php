@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HelloController;
 use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\BookController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,4 +26,5 @@ Route::get('halo', function(){
     return["me" => "ganss"];
 });
 
+Route::resource('book', BookController::class);
 Route::resource('siswa', SiswaController::class);
